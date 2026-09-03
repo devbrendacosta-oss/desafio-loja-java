@@ -2,21 +2,6 @@ package br.edu.aula;
 
 import java.util.Scanner;
 
-/**
- * Problemas encontrados na versão original:
- * 1) ERRO DE LÓGICA GRAVE: o programa exibia "Nome do produto: " na tela,
- *    mas nunca chamava entrada.nextLine() para guardar o valor digitado em
- *    produto.nome. Ou seja, o nome digitado pelo usuário era descartado, e
- *    o produto ficava sempre com nome = null.
- * 2) O preço podia ser zero ou negativo (nenhuma validação existia).
- * 3) A quantidade podia ser negativa (nenhuma validação existia).
- *
- * Correção: foi adicionada a leitura do nome que faltava, e laços "while"
- * repetem cada pergunta enquanto o valor digitado não for válido, usando
- * apenas if/else — sem métodos extras e sem tratamento de exceções
- * (try/catch), pois esses assuntos não fazem parte do conteúdo desta
- * atividade.
- */
 public class Principal {
 
     public static void main(String[] args) {
