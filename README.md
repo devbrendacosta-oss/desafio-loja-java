@@ -144,3 +144,58 @@ Tratamento de exceções com `try/catch`, suporte a múltiplos produtos (arrays/
 ## 8. ANEXO - OBSERVAÇÃO SOBRE A ESTRUTURA DO PROJETO
 
 Os arquivos `Principal.java` e `VerificarEstoque.java`, presentes no pacote inicial, foram desconsiderados na versão final. Ambos continham métodos `main()` isolados e não integrados à classe MenuLoja. As funcionalidades de consulta e checagem de estoque foram centralizadas na arquitetura principal.
+
+
+ Cadastro de Produto - Documentação
+
+## Registro dos Testes
+
+Com base nas situações exigidas de fronteira e valores inválidos, aqui está a tabela preenchida com os testes realizados.
+
+| Teste | Entrada | Resultado esperado | Resultado obtido | Correto? |
+| :--- | :--- | :--- | :--- | :--- |
+| Estoque vazio | 0 | Sem estoque | Situação: Sem estoque | Sim |
+| Estoque mínimo | 1 | Estoque baixo | Situação: Estoque baixo | Sim |
+| Limite estoque baixo | 19 | Estoque baixo | Situação: Estoque baixo | Sim |
+| Limite estoque suficiente | 20 | Estoque suficiente | Situação: Estoque suficiente | Sim |
+| Preço negativo | -100 | Não aceitar | Laço bloqueia e pede novo valor | Sim |
+| Quantidade negativa | -2 | Não aceitar | Laço bloqueia e pede novo valor | Sim |
+| Qtd. de produtos negativa | -2 | Não aceitar | Encerra o programa imediatamente | Sim |
+
+## Questões para Reflexão Resolvidas
+
+**1. Por que um laço de repetição foi necessário nesta atividade?**
+Para evitar a duplicação manual de código. O laço permite solicitar a entrada de dados (nome, preço, quantidade) e realizar os cálculos para vários produtos consecutivos de forma automatizada.
+
+**2. Por que o `for` é adequado quando sabemos quantos produtos serão analisados?**
+Porque o `for` foi projetado exatamente para iterações finitas. Como o usuário informa logo no início a quantidade de produtos, a estrutura `for` já estabelece o início, a condição de parada e o incremento na mesma linha de declaração.
+
+**3. O que aconteceria se o incremento do `for` fosse removido?**
+O programa entraria em um *loop infinito*. A variável contadora `i` nunca atingiria o limite imposto por `quantidadeProdutos`, travando a execução.
+
+**4. Qual é a função de um contador?**
+Um contador serve para registrar a frequência com que um determinado evento ocorre. No código, as variáveis como `estoqueBaixo` e `semEstoque` contam quantos produtos se enquadram em cada categoria.
+
+**5. Qual é a função de um acumulador?**
+Um acumulador serve para somar e armazenar valores progressivamente ao longo do laço. O `valorTotalEstoque` é um exemplo, pois vai somando o valor individual de cada novo produto inserido.
+
+**6. Qual é a diferença entre contador e acumulador?**
+O contador aumenta em um valor constante (geralmente `+1` a cada ocorrência), enquanto o acumulador recebe incrementos variáveis (como o preço de cada produto, que muda a cada repetição).
+
+**7. Por que os contadores devem começar em 0?**
+Porque antes do início da contagem, nenhum produto foi analisado e, logicamente, nenhum evento que se deseja contar ocorreu ainda.
+
+**8. Por que o valor total normalmente começa em 0?**
+Pois ele representa o elemento neutro da adição. Se o acumulador iniciasse com outro valor, o cálculo final estaria corrompido desde o primeiro produto.
+
+**9. Por que o relatório final deve ficar fora do laço?**
+Se o relatório estivesse dentro do laço de repetição, as informações de totalização seriam impressas na tela toda vez que um novo produto fosse adicionado, ao invés de exibir apenas o consolidado final ao término das análises.
+
+**10. É possível utilizar `if/else` dentro de um `for`? Onde isso foi necessário?**
+Sim, é perfeitamente possível e comum. Foi necessário para avaliar individualmente a quantidade em estoque de cada produto (definindo se era suficiente, baixo ou sem estoque) e para o Desafio Avançado (comparar se o valor atual era maior que o `maiorValor` já registrado).
+
+**11. Qual melhoria você implementou?**
+Foram implementadas validações com a estrutura `while` que impedem o usuário de digitar preços ou quantidades negativas (Testes Inválidos), garantindo a integridade dos dados e cálculos.
+
+**12. Qual foi a maior dificuldade encontrada?**
+A maior dificuldade foi gerenciar o *buffer* do `Scanner`. Após ler a quantidade de produtos com `nextInt()`, foi necessário adicionar um `entrada.nextLine()` vazio para evitar que o "Nome" do primeiro produto fosse pulado na leitura subsequente.
