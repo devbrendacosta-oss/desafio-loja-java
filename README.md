@@ -4,6 +4,7 @@
 
 Autora: Brenda    
 Disciplina: ELICITAÇÃO E PROGRAMAÇÃO
+
 Conteúdos Acadêmicos Aplicados: Tipos de dados, variáveis, classes e objetos, entrada e saída de dados, operadores aritméticos e relacionais, estruturas condicionais (if / else if else), laços de repetição (while), seleção múltipla (switch/case), desvios e controle (break, default).
 
 ## 1. ETAPAS 1 E 2 - ANÁLISE E TESTES DO SISTEMA ORIGINAL
