@@ -3,8 +3,6 @@ package br.edu.aula;
 import java.util.Scanner;
 
 /**
- * CADASTRO DE PRODUTO (Principal) — versão corrigida
- *
  * Problemas encontrados na versão original:
  * 1) ERRO DE LÓGICA GRAVE: o programa exibia "Nome do produto: " na tela,
  *    mas nunca chamava entrada.nextLine() para guardar o valor digitado em
