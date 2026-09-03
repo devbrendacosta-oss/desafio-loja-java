@@ -146,7 +146,7 @@ Tratamento de exceções com `try/catch`, suporte a múltiplos produtos (arrays/
 Os arquivos `Principal.java` e `VerificarEstoque.java`, presentes no pacote inicial, foram desconsiderados na versão final. Ambos continham métodos `main()` isolados e não integrados à classe MenuLoja. As funcionalidades de consulta e checagem de estoque foram centralizadas na arquitetura principal.
 
 
-# Cadastro de Produto - Documentação
+# Desafio 2: Cadastro de Produto - Documentação
 
 ## Registro dos Testes
 
