@@ -2,19 +2,6 @@ package br.edu.aula;
 
 import java.util.Scanner;
 
-/**
- * VERIFICAÇÃO DE ESTOQUE — versão corrigida
- *
- * Problemas encontrados na versão original:
- * 1) O nome do produto podia ficar em branco (nenhuma validação existia).
- * 2) A quantidade em estoque podia ser um número negativo, o que não faz
- *    sentido (estoque negativo não existe).
- *
- * Correção: foram adicionados laços "while", repetindo a pergunta enquanto
- * o valor digitado não for válido, usando apenas if/else — sem métodos
- * extras e sem tratamento de exceções (try/catch), pois esses assuntos não
- * fazem parte do conteúdo desta atividade.
- */
 public class VerificarEstoque {
 
     public static void main(String[] args) {
