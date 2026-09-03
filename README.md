@@ -39,8 +39,7 @@ Além do sistema principal (MenuLoja), o pacote continha duas classes soltas `Pr
 
 ## 4. ETAPAS 5 A 8 — CORREÇÕES E MELHORIAS IMPLEMENTADAS
 
-Todas as correções foram feitas utilizando estritamente os conteúdos definidos para esta atividade: laços `while` para repetição de entradas até a validação, estruturas `if` / `else if` / `else` para verificação de condições e `switch/case` para seleção de opções. Não foram utilizados métodos externos ao `main()` nem blocos `try/catch`.
-
+Todas as correções foram feitas utilizando estritamente os conteúdos definidos para esta atividade: laços `while` para repetição de entradas até a validação, estruturas `if` / `else if` / `else` para verificação de condições e `switch/case` para seleção de opções. 
 ### Regras de Validação e Operações
 * **Cadastro de Nome:** Um laço `while` repete a pergunta enquanto a string digitada for vazia.
 * **Cadastro de Preço:** Um laço `while` repete a solicitação enquanto o valor for menor ou igual a zero.
@@ -69,10 +68,6 @@ Adicionada a variável booleana `produto.cadastrado` na classe Produto. Todas as
 | Venda acima do estoque com mensagem simples | Mensagem expandida com estoque disponível e solicitado via `else if`. | Solicitação de 100 un. tendo 14 em estoque detalhou a divergência claramente. |
 | Sem funcionalidade de repor estoque | Implementada Opção 4 com validação de quantidade positiva via `while`. | Entrada de 0 rejeitada; entrada de 15 somou corretamente ao estoque. |
 | Falta de confirmação e alertas de estoque | Confirmação pré-venda (S/N) e checagem pós-venda para estoque <= 5. | Venda solicitou confirmação; ao atingir 3 unidades, emitiu alerta visual. |
-
-## 5. ETAPA 9
-
-*(Sem conteúdo textual adicional na etapa original)*
 
 ## 6. DESAFIO DE INVESTIGAÇÃO
 
@@ -154,5 +149,3 @@ Tratamento de exceções com `try/catch`, suporte a múltiplos produtos (arrays/
 ## ANEXO - OBSERVAÇÃO SOBRE A ESTRUTURA DO PROJETO
 
 Os arquivos `Principal.java` e `VerificarEstoque.java`, presentes no pacote inicial, foram desconsiderados na versão final. Ambos continham métodos `main()` isolados e não integrados à classe MenuLoja. As funcionalidades de consulta e checagem de estoque foram centralizadas na arquitetura principal.
-
-**Decisão de Projeto:** A não utilização de blocos `try/catch` fundamentou-se no cumprimento estrito do escopo pedagógico estabelecido, mantendo a investigação teórica da exceção sem violar a restrição de conteúdos ministrados.
