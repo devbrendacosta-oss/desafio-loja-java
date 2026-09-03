@@ -146,6 +146,6 @@ Confirmação de vendas, alerta de estoque baixo, cálculo de saldo total, restr
 11. **O que ainda poderia ser melhorado no sistema?**
 Tratamento de exceções com `try/catch`, suporte a múltiplos produtos (arrays/coleções) e persistência de dados em arquivos ou bancos de dados.
 
-## 8.ANEXO - OBSERVAÇÃO SOBRE A ESTRUTURA DO PROJETO
+## 8. ANEXO - OBSERVAÇÃO SOBRE A ESTRUTURA DO PROJETO
 
 Os arquivos `Principal.java` e `VerificarEstoque.java`, presentes no pacote inicial, foram desconsiderados na versão final. Ambos continham métodos `main()` isolados e não integrados à classe MenuLoja. As funcionalidades de consulta e checagem de estoque foram centralizadas na arquitetura principal.
