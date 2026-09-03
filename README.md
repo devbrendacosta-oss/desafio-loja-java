@@ -69,7 +69,7 @@ Adicionada a variável booleana `produto.cadastrado` na classe Produto. Todas as
 | Sem funcionalidade de repor estoque | Implementada Opção 4 com validação de quantidade positiva via `while`. | Entrada de 0 rejeitada; entrada de 15 somou corretamente ao estoque. |
 | Falta de confirmação e alertas de estoque | Confirmação pré-venda (S/N) e checagem pós-venda para estoque <= 5. | Venda solicitou confirmação; ao atingir 3 unidades, emitiu alerta visual. |
 
-## 6. DESAFIO DE INVESTIGAÇÃO
+## 5. DESAFIO DE INVESTIGAÇÃO
 
 **Cenário de Teste:** Entrada de string "abc" no campo de preço (double).
 
@@ -79,7 +79,7 @@ Adicionada a variável booleana `produto.cadastrado` na classe Produto. Todas as
 4. **Por que isso aconteceu?** O método `nextDouble()` tenta converter a entrada do console diretamente em ponto flutuante. Ao receber caracteres alfabéticos, a exceção é lançada. Como o código não possuía rotina de tratamento, a JVM encerrou o programa.
 5. **Como tratar futuramente?** Envolvendo o bloco de leitura em uma estrutura `try/catch` para capturar a exceção e solicitar a reentrada dos dados sem encerrar a aplicação.
 
-## 7. RELATÓRIO DO DESAFIO - DETALHAMENTO DOS PROBLEMAS
+## 6. RELATÓRIO DO DESAFIO - DETALHAMENTO DOS PROBLEMAS
 
 ### PROBLEMA 1: Cadastro de Preço Inválido
 * **Situação Testada:** Cadastro de produto com preço negativo (-10).
@@ -111,7 +111,7 @@ Adicionada a variável booleana `produto.cadastrado` na classe Produto. Todas as
 * **Correção:** Mantido sem alteração em conformidade com as diretrizes do desafio (requer `try/catch`).
 * **Resultado:** Comportamento documentado para futura implementação acadêmica.
 
-## 8. QUESTÕES PARA REFLEXÃO
+## 7. QUESTÕES PARA REFLEXÃO
 
 1. **Um programa que executa sem apresentar erro necessariamente está correto?**
 Não. O sistema original compilava e rodava, mas aceitava dados semanticamente incorretos (estoque negativo, preços zerados). A ausência de falhas de compilação não garante a correção das regras de negócio.
@@ -146,6 +146,6 @@ Confirmação de vendas, alerta de estoque baixo, cálculo de saldo total, restr
 11. **O que ainda poderia ser melhorado no sistema?**
 Tratamento de exceções com `try/catch`, suporte a múltiplos produtos (arrays/coleções) e persistência de dados em arquivos ou bancos de dados.
 
-## ANEXO - OBSERVAÇÃO SOBRE A ESTRUTURA DO PROJETO
+## 8.ANEXO - OBSERVAÇÃO SOBRE A ESTRUTURA DO PROJETO
 
 Os arquivos `Principal.java` e `VerificarEstoque.java`, presentes no pacote inicial, foram desconsiderados na versão final. Ambos continham métodos `main()` isolados e não integrados à classe MenuLoja. As funcionalidades de consulta e checagem de estoque foram centralizadas na arquitetura principal.
